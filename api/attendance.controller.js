@@ -61,4 +61,7 @@ export default class AttendanceController {
         }
 
     }
+    static async apiHelp(req,res,next) {
+        res.json({"help":"Timetable Route /:clcode/timetable/, Attendance Route /:clcode/attendance/:crcode/:rollnum/, all rollnums from 1 to 80 except 30 is available; Available :clcode is only c22z2; Available :crcode is only cr19z201"})
+    }
 }
