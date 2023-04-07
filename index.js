@@ -3,7 +3,7 @@ import mongodb from "mongodb"
 import Attedance from "./server/attendance.js"
 
 const MongoClient = mongodb.MongoClient
-const uri = "mongodb+srv://devakash:S2KKc9cHdiWPGS1X@cluster0.wr2no1s.mongodb.net/"
+const uri = "mongodb+srv://akash:v3621O59VW8g0BNb@psgscapes-data-ac295d1f.mongo.ondigitalocean.com/?authMechanism=DEFAULT"
 
 const port = 8000
 

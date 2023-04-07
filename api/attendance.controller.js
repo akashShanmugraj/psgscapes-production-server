@@ -62,6 +62,11 @@ export default class AttendanceController {
 
     }
     static async apiHelp(req,res,next) {
-        res.json({"help":"Timetable Route /:clcode/timetable/, Attendance Route /:clcode/attendance/:crcode/:rollnum/, all rollnums from 1 to 80 except 30 is available; Available :clcode is only c22z2; Available :crcode is only cr19z201"})
+        const helpObject = {"help": {
+            "Timetable API":{"route": "{BASE_URL}/:clcode/timetable/", "info": ":clcode is a param, replace it with classcode like c22z2", "availability": "Only clcode available is c22z2"},
+            "Attendance API":{"route": "{BASE_URL}/:clcode/attendance/:crcode/:rollnum/", "info": ":crcode is a param, replace it like cr19z201 ; :rollnum is optional, replace it like 22z240", "availability": "Only crcode available is cr19z201, only rollnums from 22z201 to 22z280 (without 22z230) is available, CUSTOM DATA ONLY"}
+
+        }}
+        res.json(helpObject)
     }
 }

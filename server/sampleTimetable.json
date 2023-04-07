@@ -1,12 +1,7 @@
 [
   {
     "day": "monday",
-    "19z201": "Calculus and its Applications",
-    "19z202": "Material Sciences",
-    "19z203": "Industrial Electrochemistry",
-    "19z204": "Digital Design",
-    "LIB": "Library",
-    "19z205": "C Programming"
+    "subjects": [["19G001","English"],["19z201","Math"],["19z204","Digital Design"],["19z205","C Programming"],["19z211","EG"],["19z202","Physics"],["19z203","Chemistry"],["19z213","Digital Design Lab"]]
   },
   {
     "day" : "tuesday",
