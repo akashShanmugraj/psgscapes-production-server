@@ -53,4 +53,13 @@ export default class Attendance {
             console.error(e)
         }
     }
+    static async getALLRoomUUID() {
+        try {
+            const uuidData = await databaseConnection.db('admin').collection('roomdatas').find({})
+            return uuidData.toArray()
+        } catch (e) {
+            console.error(e)
+        }
+    }
+
 }

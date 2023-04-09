@@ -69,4 +69,14 @@ export default class AttendanceController {
         }}
         res.json(helpObject)
     }
+
+    static async apiGetAllRoomUUID(req, res, next) {
+        try {
+            let UUIDData = await Attendance.getALLRoomUUID()
+            res.json(UUIDData)
+        } catch (e) {
+            console.error(e)
+            res.status(500).json({error: e})
+        }
+    }
 }
