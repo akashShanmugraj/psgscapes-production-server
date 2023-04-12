@@ -60,9 +60,18 @@ router.get('/students/:id',async (req,res,next) => {
 
 // get details of a single course's attendance
 
-router.get('/attendance/:id',async (req,res,next) => {
+router.get('/attendance/course/:id',async (req,res,next) => {
     try{
         const course=await attendanceData.find({courseCode:req.params.id});
+        res.status(200).send(course);
+    }catch(err){
+        res.status(500).send(err);
+    }
+});
+
+router.get('/attendance/student/:id',async (req,res,next) => {
+    try{
+        const course=await attendanceData.find({studentCode:req.params.id});
         res.status(200).send(course);
     }catch(err){
         res.status(500).send(err);
