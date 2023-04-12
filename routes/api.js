@@ -46,20 +46,21 @@ router.get('/students/:id',function(req,res,next){
     });
 
 // get details of a single course's attendance
-router.get('/attendance/:id',function(req,res,next){
+router.get('/attendance/courses/:crcode/',function(req,res,next){
     // res.send({type:'GET'});
-    attendanceData.find({_id:req.params.id}).then(function(course){
+    attendanceData.find({courseCode:req.params.crcode}).then(function(course){
         res.send(course);
     }).catch(next);
     });
 
-// get details of a single student for a specific course
-router.get('/attendance/:id/:studentId',function(req,res,next){
+router.get('/attendance/student/:rollnum/',function(req,res,next){
     // res.send({type:'GET'});
-    attendanceData.findOne({_id:req.params.id,studentCode:req.params.studentId}).then(function(course){
+    attendanceData.find({studentCode:req.params.rollnum}).then(function(course){
         res.send(course);
     }).catch(next);
     });
+
+
     
 // put attendance update in mongo db
 router.put('/attendance/:id/:studentId',function(req,res,next){
