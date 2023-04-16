@@ -5,6 +5,47 @@ const user=require('../models/user.js');
 const attendanceData=require('../models/attendanceData.js');
 const timeTableData=require('../models/timeTableData.js');
 const tokenManager = require('../auth/tokens.js')
+
+const sampleTimetableData = {
+    "1": {
+      "classCode": "19Z304",
+      "roomCode": "J102"
+    },
+    "2": {
+      "classCode": "19Z404",
+      "roomCode": "J201"
+    },
+    "3": {
+      "classCode": "19Z104",
+      "roomCode": "J415"
+    },
+    "4": {
+      "classCode": "19Z204",
+      "roomCode": "J415"
+    },
+    "5": {
+      "classCode": "19Z104",
+      "roomCode": "J415"
+    },
+    "6": {
+      "classCode": "19Z301",
+      "roomCode": "J102"
+    },
+    "7": {
+      "classCode": "19Z104",
+      "roomCode": "J413"
+    },
+    "8": {
+      "classCode": "19Z404",
+      "roomCode": "J402"
+    },
+    "_id": {
+      "$oid": "643ad9321d68327d901878cc"
+    },
+    "day": "Monday",
+    "classKey": "22Z22"
+  }
+
 router.get('/auth', (req, res) => {
     tokenManager.verifyToken(req, res, () => {
         res.send('Verified')
@@ -39,6 +80,13 @@ router.get('/auth/help', (req, res) => {
     res.sendfile('authhelp.html')
 })
 
+router.get('/timetable/c22z2/monday', (req, res) => {
+    res.json(sampleTimetableData)
+})
+
+router.get('/timetable/c22z2/all', (req, res) => {
+    res.sendfile('./routes/timetabledatas.json')
+})
 // get a list of students from mongo db
 router.get('/students',async (req,res,next) => {
     try{
