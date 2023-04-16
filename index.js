@@ -13,7 +13,7 @@ app.use('/api',require('./routes/api'));
 
 //connect to mongodb
 //mongodb+srv://<username>:<password>@cluster0.pfose.mongodb.net/<dbname>?retryWrites=true&w=majority
-mongoose.connect('mongodb://127.0.0.1:27017/attendance')
+mongoose.connect('mongodb+srv://anandkumar:05KnDt9g1R462f3h@psgscapes-data-ac295d1f.mongo.ondigitalocean.com/attendance?tls=true&authSource=admin&replicaSet=psgscapes-data')
 mongoose.Promise=global.Promise;
 
 //listening for requests 
