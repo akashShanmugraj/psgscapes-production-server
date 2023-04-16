@@ -4,6 +4,40 @@ exports.router = router;
 const user=require('../models/user.js');
 const attendanceData=require('../models/attendanceData.js');
 const timeTableData=require('../models/timeTableData.js');
+const tokenManager = require('../auth/tokens.js')
+router.get('/auth', (req, res) => {
+    tokenManager.verifyToken(req, res, () => {
+        res.send('Verified')
+    })
+})
+
+router.get('/info', (req, res) => {
+    const requestObject = {
+        "req.app": req.app,
+        "req.baseurl":req.baseUrl,
+        "req.body": req.body,
+        "req.cookie": req.cookie,
+        "req.hostname":req.hostname,
+        "req.ipv6":req.ipv6,
+        "req.params":req.params,
+        "req.path": req.path,
+        "req.protocol": req.protocol,
+        "req.query":req.query,
+        "req.route":req.route,
+        "req.tlsInsecure":req.tlsInsecure,
+        "req.auth":req.auth
+    }
+
+    res.send(requestObject)
+})
+
+router.post('/auth/login', tokenManager.loginToken)
+
+router.post('/auth/renew', tokenManager.renewToken)
+
+router.get('/auth/help', (req, res) => {
+    res.sendfile('authhelp.html')
+})
 
 // get a list of students from mongo db
 router.get('/students',async (req,res,next) => {
