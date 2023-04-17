@@ -1,0 +1,885 @@
+[{
+  "1": {
+    "classCode": "19Z304",
+    "roomCode": "J102"
+  },
+  "2": {
+    "classCode": "19Z404",
+    "roomCode": "J201"
+  },
+  "3": {
+    "classCode": "19Z104",
+    "roomCode": "J415"
+  },
+  "4": {
+    "classCode": "19Z204",
+    "roomCode": "J415"
+  },
+  "5": {
+    "classCode": "19Z104",
+    "roomCode": "J415"
+  },
+  "6": {
+    "classCode": "19Z301",
+    "roomCode": "J102"
+  },
+  "7": {
+    "classCode": "19Z104",
+    "roomCode": "J413"
+  },
+  "8": {
+    "classCode": "19Z404",
+    "roomCode": "J402"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878cc"
+  },
+  "day": "Monday",
+  "classKey": "22Z22"
+},{
+  "1": {
+    "classCode": "19Z302",
+    "roomCode": "J102"
+  },
+  "2": {
+    "classCode": "19Z204",
+    "roomCode": "J413"
+  },
+  "3": {
+    "classCode": "19Z304",
+    "roomCode": "J201"
+  },
+  "4": {
+    "classCode": "19Z302",
+    "roomCode": "J102"
+  },
+  "5": {
+    "classCode": "19Z304",
+    "roomCode": "J201"
+  },
+  "6": {
+    "classCode": "19Z302",
+    "roomCode": "J201"
+  },
+  "7": {
+    "classCode": "19Z202",
+    "roomCode": "J102"
+  },
+  "8": {
+    "classCode": "19Z202",
+    "roomCode": "J201"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878cd"
+  },
+  "day": "Tuesday",
+  "classKey": "22Z22"
+},{
+  "1": {
+    "classCode": "19Z304",
+    "roomCode": "J413"
+  },
+  "2": {
+    "classCode": "19Z401",
+    "roomCode": "J402"
+  },
+  "3": {
+    "classCode": "19Z404",
+    "roomCode": "J415"
+  },
+  "4": {
+    "classCode": "19Z404",
+    "roomCode": "J402"
+  },
+  "5": {
+    "classCode": "19Z301",
+    "roomCode": "J402"
+  },
+  "6": {
+    "classCode": "19Z201",
+    "roomCode": "J415"
+  },
+  "7": {
+    "classCode": "19Z102",
+    "roomCode": "J413"
+  },
+  "8": {
+    "classCode": "19Z304",
+    "roomCode": "J415"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878ce"
+  },
+  "day": "Wednesday",
+  "classKey": "22Z22"
+},{
+  "1": {
+    "classCode": "19Z104",
+    "roomCode": "J201"
+  },
+  "2": {
+    "classCode": "19Z301",
+    "roomCode": "J413"
+  },
+  "3": {
+    "classCode": "19Z201",
+    "roomCode": "J201"
+  },
+  "4": {
+    "classCode": "19Z401",
+    "roomCode": "J415"
+  },
+  "5": {
+    "classCode": "19Z302",
+    "roomCode": "J102"
+  },
+  "6": {
+    "classCode": "19Z301",
+    "roomCode": "J201"
+  },
+  "7": {
+    "classCode": "19Z102",
+    "roomCode": "J415"
+  },
+  "8": {
+    "classCode": "19Z104",
+    "roomCode": "J413"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878cf"
+  },
+  "day": "Thursday",
+  "classKey": "22Z22"
+},{
+  "1": {
+    "classCode": "19Z302",
+    "roomCode": "J201"
+  },
+  "2": {
+    "classCode": "19Z401",
+    "roomCode": "J402"
+  },
+  "3": {
+    "classCode": "19Z101",
+    "roomCode": "J201"
+  },
+  "4": {
+    "classCode": "19Z202",
+    "roomCode": "J102"
+  },
+  "5": {
+    "classCode": "19Z404",
+    "roomCode": "J402"
+  },
+  "6": {
+    "classCode": "19Z404",
+    "roomCode": "J415"
+  },
+  "7": {
+    "classCode": "19Z302",
+    "roomCode": "J415"
+  },
+  "8": {
+    "classCode": "19Z102",
+    "roomCode": "J413"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878d0"
+  },
+  "day": "Friday",
+  "classKey": "22Z22"
+},{
+  "1": {
+    "classCode": "19Z204",
+    "roomCode": "J413"
+  },
+  "2": {
+    "classCode": "19Z201",
+    "roomCode": "J402"
+  },
+  "3": {
+    "classCode": "19Z404",
+    "roomCode": "J415"
+  },
+  "4": {
+    "classCode": "19Z101",
+    "roomCode": "J415"
+  },
+  "5": {
+    "classCode": "19Z104",
+    "roomCode": "J413"
+  },
+  "6": {
+    "classCode": "19Z404",
+    "roomCode": "J102"
+  },
+  "7": {
+    "classCode": "19Z404",
+    "roomCode": "J415"
+  },
+  "8": {
+    "classCode": "19Z201",
+    "roomCode": "J415"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878d1"
+  },
+  "day": "Saturday",
+  "classKey": "22Z22"
+},{
+  "1": {
+    "classCode": "19Z201",
+    "roomCode": "J413"
+  },
+  "2": {
+    "classCode": "19Z104",
+    "roomCode": "J402"
+  },
+  "3": {
+    "classCode": "19Z204",
+    "roomCode": "J102"
+  },
+  "4": {
+    "classCode": "19Z104",
+    "roomCode": "J402"
+  },
+  "5": {
+    "classCode": "19Z202",
+    "roomCode": "J413"
+  },
+  "6": {
+    "classCode": "19Z402",
+    "roomCode": "J402"
+  },
+  "7": {
+    "classCode": "19Z201",
+    "roomCode": "J201"
+  },
+  "8": {
+    "classCode": "19Z202",
+    "roomCode": "J102"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878d2"
+  },
+  "day": "Monday",
+  "classKey": "22Z23"
+},{
+  "1": {
+    "classCode": "19Z302",
+    "roomCode": "J415"
+  },
+  "2": {
+    "classCode": "19Z102",
+    "roomCode": "J413"
+  },
+  "3": {
+    "classCode": "19Z201",
+    "roomCode": "J102"
+  },
+  "4": {
+    "classCode": "19Z104",
+    "roomCode": "J413"
+  },
+  "5": {
+    "classCode": "19Z401",
+    "roomCode": "J201"
+  },
+  "6": {
+    "classCode": "19Z201",
+    "roomCode": "J415"
+  },
+  "7": {
+    "classCode": "19Z202",
+    "roomCode": "J201"
+  },
+  "8": {
+    "classCode": "19Z304",
+    "roomCode": "J413"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878d3"
+  },
+  "day": "Tuesday",
+  "classKey": "22Z23"
+},{
+  "1": {
+    "classCode": "19Z302",
+    "roomCode": "J415"
+  },
+  "2": {
+    "classCode": "19Z302",
+    "roomCode": "J102"
+  },
+  "3": {
+    "classCode": "19Z402",
+    "roomCode": "J402"
+  },
+  "4": {
+    "classCode": "19Z401",
+    "roomCode": "J413"
+  },
+  "5": {
+    "classCode": "19Z202",
+    "roomCode": "J415"
+  },
+  "6": {
+    "classCode": "19Z202",
+    "roomCode": "J415"
+  },
+  "7": {
+    "classCode": "19Z104",
+    "roomCode": "J402"
+  },
+  "8": {
+    "classCode": "19Z204",
+    "roomCode": "J201"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878d4"
+  },
+  "day": "Wednesday",
+  "classKey": "22Z23"
+},{
+  "1": {
+    "classCode": "19Z101",
+    "roomCode": "J201"
+  },
+  "2": {
+    "classCode": "19Z101",
+    "roomCode": "J102"
+  },
+  "3": {
+    "classCode": "19Z104",
+    "roomCode": "J201"
+  },
+  "4": {
+    "classCode": "19Z401",
+    "roomCode": "J413"
+  },
+  "5": {
+    "classCode": "19Z102",
+    "roomCode": "J402"
+  },
+  "6": {
+    "classCode": "19Z304",
+    "roomCode": "J402"
+  },
+  "7": {
+    "classCode": "19Z401",
+    "roomCode": "J413"
+  },
+  "8": {
+    "classCode": "19Z101",
+    "roomCode": "J201"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878d5"
+  },
+  "day": "Thursday",
+  "classKey": "22Z23"
+},{
+  "1": {
+    "classCode": "19Z301",
+    "roomCode": "J415"
+  },
+  "2": {
+    "classCode": "19Z104",
+    "roomCode": "J402"
+  },
+  "3": {
+    "classCode": "19Z402",
+    "roomCode": "J102"
+  },
+  "4": {
+    "classCode": "19Z101",
+    "roomCode": "J415"
+  },
+  "5": {
+    "classCode": "19Z102",
+    "roomCode": "J102"
+  },
+  "6": {
+    "classCode": "19Z202",
+    "roomCode": "J402"
+  },
+  "7": {
+    "classCode": "19Z401",
+    "roomCode": "J201"
+  },
+  "8": {
+    "classCode": "19Z104",
+    "roomCode": "J413"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878d6"
+  },
+  "day": "Friday",
+  "classKey": "22Z23"
+},{
+  "1": {
+    "classCode": "19Z302",
+    "roomCode": "J415"
+  },
+  "2": {
+    "classCode": "19Z402",
+    "roomCode": "J201"
+  },
+  "3": {
+    "classCode": "19Z204",
+    "roomCode": "J413"
+  },
+  "4": {
+    "classCode": "19Z201",
+    "roomCode": "J413"
+  },
+  "5": {
+    "classCode": "19Z304",
+    "roomCode": "J402"
+  },
+  "6": {
+    "classCode": "19Z102",
+    "roomCode": "J415"
+  },
+  "7": {
+    "classCode": "19Z304",
+    "roomCode": "J415"
+  },
+  "8": {
+    "classCode": "19Z402",
+    "roomCode": "J413"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878d7"
+  },
+  "day": "Saturday",
+  "classKey": "22Z23"
+},{
+  "1": {
+    "classCode": "19Z102",
+    "roomCode": "J402"
+  },
+  "2": {
+    "classCode": "19Z402",
+    "roomCode": "J201"
+  },
+  "3": {
+    "classCode": "19Z301",
+    "roomCode": "J415"
+  },
+  "4": {
+    "classCode": "19Z302",
+    "roomCode": "J413"
+  },
+  "5": {
+    "classCode": "19Z304",
+    "roomCode": "J201"
+  },
+  "6": {
+    "classCode": "19Z101",
+    "roomCode": "J413"
+  },
+  "7": {
+    "classCode": "19Z102",
+    "roomCode": "J102"
+  },
+  "8": {
+    "classCode": "19Z101",
+    "roomCode": "J415"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878d8"
+  },
+  "day": "Monday",
+  "classKey": "21Z2"
+},{
+  "1": {
+    "classCode": "19Z204",
+    "roomCode": "J201"
+  },
+  "2": {
+    "classCode": "19Z402",
+    "roomCode": "J201"
+  },
+  "3": {
+    "classCode": "19Z101",
+    "roomCode": "J415"
+  },
+  "4": {
+    "classCode": "19Z202",
+    "roomCode": "J413"
+  },
+  "5": {
+    "classCode": "19Z102",
+    "roomCode": "J413"
+  },
+  "6": {
+    "classCode": "19Z102",
+    "roomCode": "J415"
+  },
+  "7": {
+    "classCode": "19Z302",
+    "roomCode": "J402"
+  },
+  "8": {
+    "classCode": "19Z204",
+    "roomCode": "J415"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878d9"
+  },
+  "day": "Tuesday",
+  "classKey": "21Z2"
+},{
+  "1": {
+    "classCode": "19Z404",
+    "roomCode": "J402"
+  },
+  "2": {
+    "classCode": "19Z401",
+    "roomCode": "J201"
+  },
+  "3": {
+    "classCode": "19Z301",
+    "roomCode": "J402"
+  },
+  "4": {
+    "classCode": "19Z102",
+    "roomCode": "J201"
+  },
+  "5": {
+    "classCode": "19Z102",
+    "roomCode": "J201"
+  },
+  "6": {
+    "classCode": "19Z404",
+    "roomCode": "J415"
+  },
+  "7": {
+    "classCode": "19Z301",
+    "roomCode": "J413"
+  },
+  "8": {
+    "classCode": "19Z304",
+    "roomCode": "J102"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878da"
+  },
+  "day": "Wednesday",
+  "classKey": "21Z2"
+},{
+  "1": {
+    "classCode": "19Z204",
+    "roomCode": "J415"
+  },
+  "2": {
+    "classCode": "19Z201",
+    "roomCode": "J201"
+  },
+  "3": {
+    "classCode": "19Z201",
+    "roomCode": "J413"
+  },
+  "4": {
+    "classCode": "19Z404",
+    "roomCode": "J415"
+  },
+  "5": {
+    "classCode": "19Z201",
+    "roomCode": "J413"
+  },
+  "6": {
+    "classCode": "19Z202",
+    "roomCode": "J402"
+  },
+  "7": {
+    "classCode": "19Z204",
+    "roomCode": "J402"
+  },
+  "8": {
+    "classCode": "19Z401",
+    "roomCode": "J415"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878db"
+  },
+  "day": "Thursday",
+  "classKey": "21Z2"
+},{
+  "1": {
+    "classCode": "19Z401",
+    "roomCode": "J201"
+  },
+  "2": {
+    "classCode": "19Z102",
+    "roomCode": "J102"
+  },
+  "3": {
+    "classCode": "19Z201",
+    "roomCode": "J402"
+  },
+  "4": {
+    "classCode": "19Z102",
+    "roomCode": "J415"
+  },
+  "5": {
+    "classCode": "19Z302",
+    "roomCode": "J413"
+  },
+  "6": {
+    "classCode": "19Z401",
+    "roomCode": "J201"
+  },
+  "7": {
+    "classCode": "19Z302",
+    "roomCode": "J102"
+  },
+  "8": {
+    "classCode": "19Z304",
+    "roomCode": "J413"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878dc"
+  },
+  "day": "Friday",
+  "classKey": "21Z2"
+},{
+  "1": {
+    "classCode": "19Z202",
+    "roomCode": "J402"
+  },
+  "2": {
+    "classCode": "19Z101",
+    "roomCode": "J415"
+  },
+  "3": {
+    "classCode": "19Z204",
+    "roomCode": "J415"
+  },
+  "4": {
+    "classCode": "19Z202",
+    "roomCode": "J102"
+  },
+  "5": {
+    "classCode": "19Z401",
+    "roomCode": "J201"
+  },
+  "6": {
+    "classCode": "19Z402",
+    "roomCode": "J415"
+  },
+  "7": {
+    "classCode": "19Z301",
+    "roomCode": "J102"
+  },
+  "8": {
+    "classCode": "19Z102",
+    "roomCode": "J201"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878dd"
+  },
+  "day": "Saturday",
+  "classKey": "21Z2"
+},{
+  "1": {
+    "classCode": "19Z204",
+    "roomCode": "J402"
+  },
+  "2": {
+    "classCode": "19Z302",
+    "roomCode": "J413"
+  },
+  "3": {
+    "classCode": "19Z102",
+    "roomCode": "J413"
+  },
+  "4": {
+    "classCode": "19Z202",
+    "roomCode": "J402"
+  },
+  "5": {
+    "classCode": "19Z401",
+    "roomCode": "J201"
+  },
+  "6": {
+    "classCode": "19Z201",
+    "roomCode": "J102"
+  },
+  "7": {
+    "classCode": "19Z201",
+    "roomCode": "J201"
+  },
+  "8": {
+    "classCode": "19Z101",
+    "roomCode": "J201"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878de"
+  },
+  "day": "Monday",
+  "classKey": "21Z3"
+},{
+  "1": {
+    "classCode": "19Z401",
+    "roomCode": "J201"
+  },
+  "2": {
+    "classCode": "19Z304",
+    "roomCode": "J415"
+  },
+  "3": {
+    "classCode": "19Z304",
+    "roomCode": "J102"
+  },
+  "4": {
+    "classCode": "19Z102",
+    "roomCode": "J201"
+  },
+  "5": {
+    "classCode": "19Z401",
+    "roomCode": "J415"
+  },
+  "6": {
+    "classCode": "19Z402",
+    "roomCode": "J415"
+  },
+  "7": {
+    "classCode": "19Z401",
+    "roomCode": "J415"
+  },
+  "8": {
+    "classCode": "19Z301",
+    "roomCode": "J201"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878df"
+  },
+  "day": "Tuesday",
+  "classKey": "21Z3"
+},{
+  "1": {
+    "classCode": "19Z204",
+    "roomCode": "J201"
+  },
+  "2": {
+    "classCode": "19Z102",
+    "roomCode": "J102"
+  },
+  "3": {
+    "classCode": "19Z301",
+    "roomCode": "J415"
+  },
+  "4": {
+    "classCode": "19Z101",
+    "roomCode": "J102"
+  },
+  "5": {
+    "classCode": "19Z202",
+    "roomCode": "J201"
+  },
+  "6": {
+    "classCode": "19Z101",
+    "roomCode": "J413"
+  },
+  "7": {
+    "classCode": "19Z104",
+    "roomCode": "J415"
+  },
+  "8": {
+    "classCode": "19Z401",
+    "roomCode": "J201"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878e0"
+  },
+  "day": "Wednesday",
+  "classKey": "21Z3"
+},{
+  "1": {
+    "classCode": "19Z302",
+    "roomCode": "J102"
+  },
+  "2": {
+    "classCode": "19Z401",
+    "roomCode": "J201"
+  },
+  "3": {
+    "classCode": "19Z102",
+    "roomCode": "J102"
+  },
+  "4": {
+    "classCode": "19Z204",
+    "roomCode": "J402"
+  },
+  "5": {
+    "classCode": "19Z202",
+    "roomCode": "J402"
+  },
+  "6": {
+    "classCode": "19Z202",
+    "roomCode": "J402"
+  },
+  "7": {
+    "classCode": "19Z302",
+    "roomCode": "J402"
+  },
+  "8": {
+    "classCode": "19Z301",
+    "roomCode": "J102"
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878e1"
+  },
+  "day": "Thursday",
+  "classKey": "21Z3"
+},{
+  "1": {
+    "classCode": "19Z204",
+    "roomCode": "J413"
+  },
+  "2": {
+    "classCode": "19Z404",
+    "roomCode": "J413"
+  },
+  "3": {
+    "classCode": "19Z102",
+    "roomCode": "J402"
+  },
+  "4": {
+    "classCode": "19Z402",
+    "roomCode": "J402"
+  },
+  "5": {
+    "classCode": "19Z304",
+    "roomCode": "J201"
+  },
+  "6": {
+    "classCode": "19Z204",
+    "roomCode": "J402"
+  },
+  "7": {
+    "classCode": "19Z204",
+    "roomCode": "J413"
+  },
+  "8": {
+    "6": {
+      "classCode": "19Z202",
+      "roomCode": "J402"
+    },
+    "7": {
+      "classCode": "19Z402",
+      "roomCode": "J415"
+    },
+    "8": {
+      "classCode": "19Z202",
+      "roomCode": "J402"
+    }
+  },
+  "_id": {
+    "$oid": "643ad9321d68327d901878e2"
+  },
+  "day": "Friday",
+  "classKey": "21Z3"
+}]
