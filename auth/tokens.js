@@ -18,11 +18,11 @@ class tokenManager {
             }
 
             const userData = await userSchema.find({rollnumber: rollnumber})
-            const password = await userData[0]['password']
+            const password = await userData[0].password
 
             const authenticationText = await encryption.decrypt(encryptedauthenticationText, password)
 
-            if ( authenticationText['token'] === oldToken ) {
+            if ( authenticationText.token === oldToken ) {
                 const newToken = jwt.sign({"rollnumber": rollnumber}, 
                 password, 
                 {expiresIn:'10m'}
@@ -30,7 +30,7 @@ class tokenManager {
                 
                 const encryptedAuthenticationText = await encryption.encrypt(
                     JSON.stringify({"rollnumber": rollnumber, "token":newToken}), 
-                    userData[0]['password']
+                    userData[0].password
                     )
                 
                 res.send({"token":newToken, 'authenticationText':encryptedAuthenticationText, "info": 'New token expires in 10 minutes '})
@@ -53,7 +53,7 @@ class tokenManager {
             const userData = await userSchema.find({rollnumber:rollnumber})
 
             // const authenticationText = JSON.stringify({"rollnumber": rollnum, "token":newToken})
-            if (tutorcode === actualtutorcode && password === userData[0]["password"]) {
+            if (tutorcode === actualtutorcode && password === userData[0].password) {
 
                 const newToken = jwt.sign({"rollnumber":userData[0]['rollnumber']}, 
                     userData[0]['password'],
@@ -105,7 +105,7 @@ class tokenManager {
             }
 
             const userData = await userSchema.find({rollnumber : rollnumber})
-            const password = await userData[0]['password']
+            const password = await userData[0].password
             jwt.verify(token, password)
             console.log('verified')
             await callbackfunction()
