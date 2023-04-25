@@ -1,0 +1,11 @@
+<h1 id="help-for-auth-route">Help for /auth route</h1>
+<p>This route is used for all means of authentication purposes. The current version is meant to be a non deployable testing server model, and will not be exactly used in the production server.</p>
+<p>Available routes:</p>
+<pre>- <code><b>GET {BASE_URL}/auth/</b> (PROTECTED) is a sample root API <br/>
+- <b>POST {BASE_URL}/auth/login</b> is used for login <span class="hljs-keyword">of</span> new users, provide <b>rollnumber</b>, <b>tutorcode</b> and <b>password</b> <span class="hljs-keyword">as</span> headers <span class="hljs-keyword">in</span> your HTTP request. <br/>  This route returns <b>token</b> and <b>authenticationtext</b> which must be stored.<br/>
+- <b>POST {BASE_URL}/auth/renew</b> is used for renewing expired tokens, provide <b>rollnumber</b>, <b>token</b> (the expired token), and <b>auth</b> (authentication text returned <span class="hljs-keyword">from</span> latest renewal or login).<br/>  This route returns a new set <span class="hljs-keyword">of</span> <b>token</b> and <b>authenticationtext</b><br/>
+- <b>GET {BASE_URL}/info</b> (ONLY TESTING) is used to help a developer know how their HTTP request(s) are recieved.<br/>  Displays several metrics <span class="hljs-keyword">of</span> the request. No specific API configuration required <br/>
+
+</code></pre><h3 id="testing">Testing</h3>
+<p>Routes marked as PROTECTED can be used for testing the authentication perspective of the application</p>
+<p>Use <i>22z255</i> as username, <i>e8mMH5EqhKliqu8+5hUtZq38Q09mx3s6</i> as password, and <i>1143</i> as tutorcode 
