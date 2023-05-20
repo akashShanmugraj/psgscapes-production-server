@@ -44,7 +44,7 @@ router.get("/auth/help", (req, res) => {
 //get a list of faculties from mongo db
 //NOT YET IMPLEMENTED NO DATA IN DB
 router.get("/faculty", function (req, res, next) {
-  res.send({ type: "GET" });
+  res.send({ message: "data-to-be-inserted" });
   // user.find({role:'faculty'}).then(function(faculties){
   //     res.send(faculties);
   // }).catch(next);
@@ -198,7 +198,7 @@ router.get(
 );
 
 // get a list of students from mongo db
-router.get("/students", async (req, res, next) => {
+router.get("/students/all", async (req, res, next) => {
   try {
     const students = await Promise.all([user.find({ role: "student" })]);
     res.status(200).send(students);
@@ -208,7 +208,7 @@ router.get("/students", async (req, res, next) => {
 });
 // get details of a single student
 
-router.get("/students-user-details/:id", async (req, res, next) => {
+router.get("/students/:id", async (req, res, next) => {
   try {
     const student = await user.findOne({ _id: req.params.id });
     res.status(200).send(student);
@@ -230,7 +230,7 @@ router.get("/attendance", async (req, res, next) => {
 
 // get details of a single course's attendance
 
-router.get("/attendance-single-course/:id", async (req, res, next) => {
+router.get("/attendance/course/:id", async (req, res, next) => {
   try {
     const course = await attendanceData.find({ courseCode: req.params.id });
     res.status(200).send(course);
@@ -241,7 +241,7 @@ router.get("/attendance-single-course/:id", async (req, res, next) => {
 
 // get details of a single student attendance
 
-router.get("/attendance-single-student/:studentId", async (req, res, next) => {
+router.get("/attendance/student/:id", async (req, res, next) => {
   try {
     const course = await attendanceData.find({
       studentCode: req.params.studentId,
@@ -255,11 +255,11 @@ router.get("/attendance-single-student/:studentId", async (req, res, next) => {
 // get deatils of a specific course's attendance of a specific student
 
 router.get(
-  "/attendance-single-course-student/:id/:studentId",
+  "/attendance/course/:courseId/student/:studentId",
   async (req, res, next) => {
     try {
       const course = await attendanceData.findOne({
-        courseCode: req.params.id,
+        courseCode: req.params.courseId,
         studentCode: req.params.studentId,
       });
       res.status(200).send(course);
@@ -290,7 +290,7 @@ router.get(
 // put attendance update in mongo db
 
 router.put(
-  "/attendance-forOneCourse&Stud/:id/:studentId",
+  "/attendance/update/course/:courseid/student/:studentId",
   async (req, res, next) => {
     try {
       const course = await attendanceData.findOneAndUpdate(
