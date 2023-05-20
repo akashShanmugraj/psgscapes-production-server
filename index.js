@@ -20,7 +20,7 @@ mongoose.Promise=global.Promise;
 app.listen(process.env.port || 4000,function(){ 
      
 }); 
- 
+console.log(`Listening on port ${process.env.port || 4000}`)
 //error handling  
 app.use(function(err,req,res,next){ 
     res.status(422).send({error:err.message}); 

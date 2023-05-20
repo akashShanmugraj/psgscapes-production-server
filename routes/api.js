@@ -4,7 +4,7 @@ exports.router = router;
 const user = require("../models/user.js");
 const attendanceData = require("../models/attendanceData.js");
 const timeTableData = require("../models/timeTableData.js");
-const tokenManager = require("../auth/tokens.js");
+const tokenManager = require("../auth/authentication.js");
 const courseData = require("../models/courseData.js");
 
 router.get("/auth", (req, res) => {
