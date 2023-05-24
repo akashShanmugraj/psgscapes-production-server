@@ -1,0 +1,11 @@
+<h1 id="help-for-auth-route">Help for /auth route</h1>
+<p><i>Last updated by Akash Shanmugaraj on 24th May 2023</i></p>
+<p>This route is used for all means of authentication purposes. The current version is meant to be a non deployable testing server model, and will not be exactly used in the production server.</p>
+<p>Available routes:</p>
+<pre>- <code><b>GET {BASE_URL}/authentication/</b> sample root API<br/>
+- <b>POST {BASE_URL}/authentication/verify</b> is used for verifying credentials <span class="hljs-keyword">of</span> users, provide <b>rollnumber</b>, <b>tutorcode</b> and <b>password</b> <span class="hljs-keyword">as</span> body parameters <span class="hljs-keyword">in</span> your HTTP request. <br/>  This route returns a <b>boolean</b> response<br/>
+
+</code></pre><h3 id="testing">Testing</h3>
+<p>Routes marked as PROTECTED can be used for testing the authentication perspective of the application</p>
+<p>Use <i>22Z201</i> as rollnumber, <i>1234</i> as password</p>
+<p>Previously available authentication features such as <i>tokens</i> and <i>encrypted-authentication</i> will be rolled out soon on a need</p>
