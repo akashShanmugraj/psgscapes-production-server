@@ -22,7 +22,7 @@ app.use("/api/timetable", timetableRoutes);
 app.use("/api/attendance", attendanceRoutes);
 app.use("/api/courseData", courseDataRoutes);
 app.use("/api/attendanceUpdate", attendanceUpdateRoutes);
-app.use("/api/authentication", authenticationRoutes);
+app.use("/api/auth", authenticationRoutes);
 app.listen(process.env.PORT, () => {
   console.log(`Server is listening on http://localhost:${process.env.PORT}`);
 });
