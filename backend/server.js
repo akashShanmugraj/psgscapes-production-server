@@ -8,6 +8,7 @@ import attendanceRoutes from "./routes/attendanceRoutes.js";
 import courseDataRoutes from "./routes/courseDataRoutes.js";
 import attendanceUpdateRoutes from "./routes/attendanceUpdateRoutes.js";
 import authenticationRoutes from "./routes/authenticationRoutes.js";
+import utilityRoutes from "./routes/utilityRoutes.js";
 dotenv.config();
 mongoose.connect(process.env.MONGO_URI);
 mongoose.Promise = global.Promise;
@@ -23,6 +24,7 @@ app.use("/api/attendance", attendanceRoutes);
 app.use("/api/courseData", courseDataRoutes);
 app.use("/api/attendanceUpdate", attendanceUpdateRoutes);
 app.use("/api/auth", authenticationRoutes);
+app.use("/utility", utilityRoutes)
 app.listen(process.env.PORT, () => {
   console.log(`Server is listening on http://localhost:${process.env.PORT}`);
 });
