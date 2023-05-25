@@ -11,6 +11,11 @@ User Infomation by giving ID number. Works for both students and faculty
 ```
 /api/userInfo/:id
 ```
+Student Infomation by giving ID number. Works for students of a specifc class
+
+```
+/api/userInfo/studentsofclass/:classKey
+```
 
 Timetable for the week along with room UUIDs
 
