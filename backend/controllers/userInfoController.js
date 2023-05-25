@@ -7,5 +7,12 @@ const getUserInfo = asyncHandler(async (req, res) => {
   console.log(userInfo);
   res.json(userInfo);
 });
+const studClassInfo = asyncHandler(async (req, res) => {
+  const classInfo = await user.find({
+    classKey: req.params.classKey,
+    role: "student",
+  });
+  res.json(classInfo);
+});
 
-export { getUserInfo };
+export { getUserInfo, studClassInfo };
