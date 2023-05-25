@@ -12,13 +12,29 @@ function getUUID(periods, periodNumber, courseCode) {
   return null; // Return null if no match is found
 }
 
-function verifyUUIDs(userUUIDs, dbUUIDs) {
-  for (const userUUID of userUUIDs) {
-    if (userUUID === dbUUIDs) {
-      return true;
+function verifyUUIDs(userUUIDs, dbUUIDs, os) {
+  // os contains a true or false value depending on the device
+  //dbUUIDs contains two values the first being a MAC Address for Android Device and the second being a UUID for IOS Devices
+  // if os===true: it is an android device
+  if (os === true) {
+    const systemUUIDs = dbUUIDs[0];
+    for (const userUUID of userUUIDs) {
+      if (userUUID === dbUUIDs) {
+        return true;
+      }
     }
+    return false;
   }
-  return false;
+  // if os===false: it is an IOS device
+  else {
+    const systemUUIDs = dbUUIDs[1];
+    for (const userUUID of userUUIDs) {
+      if (userUUID === dbUUIDs) {
+        return true;
+      }
+    }
+    return false;
+  }
 }
 
 function incrementTotalPresentandClasses(studentCode, courseCode) {
@@ -81,7 +97,7 @@ const presenceVerify = asyncHandler(async (req, res) => {
     req.body.periodNumber,
     req.body.courseCode
   );
-  if (verifyUUIDs(req.body.uuids, uuid)) {
+  if (verifyUUIDs(req.body.uuids, uuid, req.body.os)) {
     incrementTotalPresentandClasses(req.body.studentCode, req.body.courseCode);
   } else {
     addAbsentDate(
