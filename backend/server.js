@@ -9,6 +9,7 @@ import courseDataRoutes from "./routes/courseDataRoutes.js";
 import attendanceUpdateRoutes from "./routes/attendanceUpdateRoutes.js";
 import authenticationRoutes from "./routes/authenticationRoutes.js";
 import utilityRoutes from "./routes/utilityRoutes.js";
+import cors from "cors";
 dotenv.config();
 mongoose.connect(process.env.MONGO_URI);
 mongoose.Promise = global.Promise;

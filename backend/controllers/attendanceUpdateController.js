@@ -17,7 +17,7 @@ function verifyUUIDs(userUUIDs, dbUUIDs, os) {
   //dbUUIDs contains two values the first being a MAC Address for Android Device and the second being a UUID for IOS Devices
   // if os===true: it is an android device
   if (os === true) {
-    const systemUUIDs = dbUUIDs[0];
+    const systemUUIDs = dbUUIDs.mac;
     for (const userUUID of userUUIDs) {
       if (userUUID === dbUUIDs) {
         return true;
@@ -27,7 +27,7 @@ function verifyUUIDs(userUUIDs, dbUUIDs, os) {
   }
   // if os===false: it is an IOS device
   else {
-    const systemUUIDs = dbUUIDs[1];
+    const systemUUIDs = dbUUIDs.uuid;
     for (const userUUID of userUUIDs) {
       if (userUUID === dbUUIDs) {
         return true;

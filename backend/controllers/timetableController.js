@@ -16,17 +16,21 @@ const getTimetablewithRoomCode = asyncHandler(async (req, res) => {
       },
     },
   ]);
-  const roomDataMap = data[0].roomData.reduce((acc, room) => {
-    acc[room._id] = room.uuid;
+  const roomDataMapUUID = data[0].roomData.reduce((acc, room) => {
+    acc[room._id] = [room.uuid];
     return acc;
   }, {});
-
+  const roomDataMapMAC = data[0].roomData.reduce((acc, room) => {
+    acc[room._id] = [room.mac];
+    return acc;
+  }, {});
   // Update the periods with the corresponding uuid from roomData
   const updatedData = data.map((item) => ({
     ...item,
     periods: item.periods.map((period) => ({
       ...period,
-      uuid: roomDataMap[period.roomCode],
+      uuid: roomDataMapUUID[period.roomCode],
+      mac: roomDataMapMAC[period.roomCode],
     })),
   }));
   const timetable = JSON.stringify(updatedData, null, 2);
@@ -53,6 +57,10 @@ const getTimetableDaywithRoomCode = asyncHandler(async (req, res) => {
     acc[room._id] = room.uuid;
     return acc;
   }, {});
+  const roomDataMapMAC = data[0].roomData.reduce((acc, room) => {
+    acc[room._id] = [room.mac];
+    return acc;
+  }, {});
 
   // Update the periods with the corresponding uuid from roomData
   const updatedData = data.map((item) => ({
@@ -60,6 +68,7 @@ const getTimetableDaywithRoomCode = asyncHandler(async (req, res) => {
     periods: item.periods.map((period) => ({
       ...period,
       uuid: roomDataMap[period.roomCode],
+      mac: roomDataMapMAC[period.roomCode],
     })),
   }));
   const timetable = JSON.stringify(updatedData, null, 2);
