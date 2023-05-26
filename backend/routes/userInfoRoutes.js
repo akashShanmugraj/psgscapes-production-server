@@ -7,5 +7,5 @@ import {
 const router = express.Router();
 router.get("/:id", getUserInfo);
 router.get("/studentsofclass/:classKey", studClassInfo);
-router.get("/students", studInfo);
+router.get("/students/all", studInfo);
 export default router;
