@@ -2,7 +2,6 @@ import axios from "axios";
 import asyncHandler from "express-async-handler";
 import { timeTableData, attendanceData } from "../schemas/Schema.js";
 var timetable;
-
 function getUUID(periods, periodNumber, courseCode) {
   for (const period of periods) {
     if (period.periodNumber === periodNumber && period.course === courseCode) {
@@ -72,6 +71,29 @@ function addAbsentDate(studentCode, courseCode, date, time) {
       console.log(err);
     });
 }
+
+function fetchTimetable() {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(
+        `${process.env.BASE_FETCH_URL}/api/timetable/comparison/day/${req.body.classKey}/${Day}`
+      )
+      .then((response) => response.json())
+      .then((data) => {
+        const timetable = data;
+        const uuid = getUUID(
+          timetable.periods,
+          req.body.periodNumber,
+          req.body.courseCode
+        );
+        resolve(uuid);
+      })
+      .catch((error) => {
+        console.log(error);
+        reject(error);
+      });
+  });
+}
 const presenceVerify = asyncHandler(async (req, res) => {
   const dateTime = new Date(req.body.datetime);
   const year = dateTime.getFullYear();
@@ -84,29 +106,21 @@ const presenceVerify = asyncHandler(async (req, res) => {
   const formattedTime = `${hours}:${minutes}:${seconds}`;
   const Day = dateTime.getDay();
 
-  axios
-    .get("/api/timetable/comparison/day/${req.body.classKey}/${Day}")
-    .then((response) => {
-      timetable = response.data;
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-  const uuid = getUUID(
-    timetable.periods,
-    req.body.periodNumber,
-    req.body.courseCode
-  );
-  if (verifyUUIDs(req.body.uuids, uuid, req.body.os)) {
-    incrementTotalPresentandClasses(req.body.studentCode, req.body.courseCode);
-  } else {
-    addAbsentDate(
-      req.body.studentCode,
-      req.body.courseCode,
-      formattedDate,
-      formattedTime
-    );
-  }
+  fetchTimetable().then((uuid) => {
+    if (verifyUUIDs(req.body.uuids, uuid, req.body.os)) {
+      incrementTotalPresentandClasses(
+        req.body.studentCode,
+        req.body.courseCode
+      );
+    } else {
+      addAbsentDate(
+        req.body.studentCode,
+        req.body.courseCode,
+        formattedDate,
+        formattedTime
+      );
+    }
+  });
 });
 
 export { presenceVerify };
