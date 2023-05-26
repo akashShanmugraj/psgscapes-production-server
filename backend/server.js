@@ -31,7 +31,7 @@ app.use("/api/attendance", attendanceRoutes);
 app.use("/api/courseData", courseDataRoutes);
 app.use("/api/attendanceUpdate", attendanceUpdateRoutes);
 app.use("/api/auth", authenticationRoutes);
-app.use("api/utility", utilityRoutes);
+app.use("/api/utility", utilityRoutes);
 app.listen(process.env.PORT, () => {
   console.log(`Server is listening on http://localhost:${process.env.PORT}`);
 });
