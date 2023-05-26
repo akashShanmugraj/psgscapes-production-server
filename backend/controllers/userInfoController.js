@@ -15,4 +15,8 @@ const studClassInfo = asyncHandler(async (req, res) => {
   res.json(classInfo);
 });
 
-export { getUserInfo, studClassInfo };
+const studInfo = asyncHandler(async (req, res) => {
+  const studInfo = await user.find({ role: "student" });
+  res.json(studInfo);
+});
+export { getUserInfo, studClassInfo, studInfo };
