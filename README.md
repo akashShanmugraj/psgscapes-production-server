@@ -21,7 +21,7 @@ Student Infomation by giving ID number. Works for students of a specifc class
 Information of all the students in the data base
 
 ```
-/api/userInfo/students
+/api/userInfo/students/all
 ```
 
 Timetable for the week along with room UUIDs
