@@ -71,7 +71,7 @@ Course Data according to the Course ID
 Attedance Verification
 
 ```
-/api/attendanceUpdate/preseneVerify
+/api/attendanceUpdate/presenceVerify
 ```
 
 The information that needs to be passed in req.body are: -
