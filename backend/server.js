@@ -22,7 +22,9 @@ app.use(
 );
 
 app.use(morgan("dev"));
-app.get("/", (req, res) => {});
+app.get("/api", (req, res) => {
+  res.send("this is psg scapes api")
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/userInfo", userInfoRoutes);
