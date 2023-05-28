@@ -78,12 +78,12 @@ const getTimetableDaywithRoomCode = asyncHandler(async (req, res) => {
 });
 
 const getTimetableWeek = asyncHandler(async (req, res) => {
-  const timetableInfo = timeTableData.find({ classKey: req.params.id });
-  res.status(200).send(timetableInfo);
+  const timetableInfo = await timeTableData.find({ classKey: req.params.id });
+  res.status(200).json(timetableInfo);
 });
 
 const getTimetableDay = asyncHandler(async (req, res) => {
-  const timetableInfo = timeTableData.find({
+  const timetableInfo = await timeTableData.find({
     classKey: req.params.id,
     day: req.params.day,
   });
