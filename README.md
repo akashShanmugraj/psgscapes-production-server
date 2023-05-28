@@ -66,6 +66,12 @@ Course Data according to the Course ID
 /api/courseData/:id
 ```
 
+Attendance information for all students
+
+```
+/api/attendance/students
+```
+
 ---
 
 Attedance Verification
