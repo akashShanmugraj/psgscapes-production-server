@@ -18,9 +18,17 @@ const getAllAttendance = asyncHandler(async (req, res) => {
   // console.log(studInfo)
   res.json(allInfo);
 });
+const getSingleAttendanceRecord = asyncHandler(async (req, res) => {
+  const singleInfo = await attendanceData.find({
+    studentCode: req.params.studentCode,
+    courseCode: req.params.id,
+  });
+  res.json(singleInfo);
+});
 
 export {
   getAttendanceforCoursebyClass,
   gettAttendancebyStudent,
   getAllAttendance,
+  getSingleAttendanceRecord,
 };

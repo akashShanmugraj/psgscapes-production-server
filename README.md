@@ -72,6 +72,12 @@ Attendance information for all students
 /api/attendance/students
 ```
 
+Attendance information for a specific student in a specific class
+
+```
+/api/attendance/singleRecord/:id/:studentCode
+```
+
 ---
 
 Attedance Verification
