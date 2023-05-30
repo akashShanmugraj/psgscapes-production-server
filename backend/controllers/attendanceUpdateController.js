@@ -3,6 +3,7 @@ import asyncHandler from "express-async-handler";
 import { timeTableData, attendanceData } from "../schemas/Schema.js";
 var timetable;
 function getUUID(periods, periodNumber, courseCode) {
+  
   for (const period of periods) {
     if (period.periodNumber === periodNumber && period.course === courseCode) {
       return period.uuid;
@@ -95,6 +96,8 @@ function fetchTimetable() {
   });
 }
 const presenceVerify = asyncHandler(async (req, res) => {
+  infolog(req);
+
   const dateTime = new Date(req.body.datetime);
   const year = dateTime.getFullYear();
   const month = dateTime.getMonth() + 1;

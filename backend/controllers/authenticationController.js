@@ -1,14 +1,17 @@
 import asyncHandler from "express-async-handler";
 import mongoose from "mongoose";
 import { user } from "../schemas/Schema.js";
+import infolog from "../logger.js";
 
 const credential = async (req, res) => {
+  infolog(req);
   const userInfo = await user.findOne({ _id: req.params.id });
   console.log(userInfo);
   res.json(userInfo);
 };
 
 const verify = asyncHandler(async (req, res) => {
+  infolog(req);
   const userInfo = await user.findOne({ _id: req.body.rollnumber });
   if (userInfo["password"] == req.body.password) {
     console.log(userInfo)
@@ -21,6 +24,7 @@ const verify = asyncHandler(async (req, res) => {
 });
 
 const authenticationHelp = asyncHandler(async (req, res) => {
+  infolog(req);
   res.sendfile("authhelp.html");
 });
 

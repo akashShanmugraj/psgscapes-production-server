@@ -6,6 +6,7 @@ import {
   attendanceinfo,
   userinfo,
   utilityhelp,
+  infologstream
 } from "../controllers/utilityController.js";
 const router = express.Router();
 router.get("/room/all", roominfo);
@@ -14,6 +15,7 @@ router.get("/course/all", courseinfo);
 router.get("/attendance/all", attendanceinfo);
 router.get("/user/all", userinfo);
 router.get("/help", utilityhelp);
+router.get("/log/info", infologstream);
 router.post("/info", (req, res) => {
   const requestObject = {
     "req.app": req.app,
