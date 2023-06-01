@@ -9,6 +9,7 @@ import courseDataRoutes from "./routes/courseDataRoutes.js";
 import attendanceUpdateRoutes from "./routes/attendanceUpdateRoutes.js";
 import authenticationRoutes from "./routes/authenticationRoutes.js";
 import utilityRoutes from "./routes/utilityRoutes.js";
+import facultyRoutes from "./routes/facultyRoutes.js";
 import cors from "cors";
 dotenv.config();
 mongoose.connect(process.env.MONGO_URI);
@@ -23,7 +24,7 @@ app.use(
 
 app.use(morgan("dev"));
 app.get("/api", (req, res) => {
-  res.send("this is psg scapes api")
+  res.send("this is psg scapes api");
 });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -33,6 +34,7 @@ app.use("/api/attendance", attendanceRoutes);
 app.use("/api/courseData", courseDataRoutes);
 app.use("/api/attendanceUpdate", attendanceUpdateRoutes);
 app.use("/api/auth", authenticationRoutes);
+app.use("/api/faculty", facultyRoutes);
 app.use("/api/utility", utilityRoutes);
 app.listen(process.env.PORT, () => {
   console.log(`Server is listening on http://localhost:${process.env.PORT}`);
