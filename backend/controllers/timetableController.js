@@ -1,8 +1,10 @@
 import asyncHandler from "express-async-handler";
 import mongoose from "mongoose";
+import infolog from "../logger.js";
 
 import { timeTableData } from "../schemas/Schema.js";
 const getTimetablewithRoomCode = asyncHandler(async (req, res) => {
+  infolog(req);
   const data = await timeTableData.aggregate([
     {
       $match: { classKey: req.params.id },
@@ -17,6 +19,7 @@ const getTimetablewithRoomCode = asyncHandler(async (req, res) => {
     },
   ]);
   const roomDataMapUUID = data[0].roomData.reduce((acc, room) => {
+    
     acc[room._id] = [room.uuid];
     return acc;
   }, {});
@@ -40,6 +43,7 @@ const getTimetablewithRoomCode = asyncHandler(async (req, res) => {
 });
 
 const getTimetableDaywithRoomCode = asyncHandler(async (req, res) => {
+  infolog(req);
   const data = await timeTableData.aggregate([
     {
       $match: { classKey: req.params.id, day: req.params.day },
@@ -78,11 +82,13 @@ const getTimetableDaywithRoomCode = asyncHandler(async (req, res) => {
 });
 
 const getTimetableWeek = asyncHandler(async (req, res) => {
+  infolog(req);
   const timetableInfo = await timeTableData.find({ classKey: req.params.id });
   res.status(200).json(timetableInfo);
 });
 
 const getTimetableDay = asyncHandler(async (req, res) => {
+  infolog(req);
   const timetableInfo = await timeTableData.find({
     classKey: req.params.id,
     day: req.params.day,
