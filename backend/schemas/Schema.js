@@ -80,13 +80,29 @@ const timeTableSchema = new mongoose.Schema({
     },
   ],
 });
-
+//faculty schema
+const facultySchema = new mongoose.Schema({
+  _id: { type: String, required: true },
+  name: { type: String, required: true },
+  department: { type: String, required: true },
+  role: { type: String, required: true },
+  password: { type: String, required: true },
+  email: { type: String, required: true },
+  classKey: [{ type: String, required: true }],
+});
 //modelling the schemas
 const user = mongoose.model("user", userSchema);
 const courseData = mongoose.model("courseData", cousreSchema);
 const roomData = mongoose.model("roomData", roomSchema);
 const attendanceData = mongoose.model("attendanceData", attendanceSchema);
 const timeTableData = mongoose.model("timeTableData", timeTableSchema);
-
+const facultyData = mongoose.model("faculty", facultySchema);
 //exporting the models
-export { user, courseData, roomData, attendanceData, timeTableData };
+export {
+  user,
+  courseData,
+  roomData,
+  attendanceData,
+  timeTableData,
+  facultyData,
+};
