@@ -1,4 +1,5 @@
 import winston from 'winston';
+import cron from "node-cron";
 const logger = winston.createLogger({
     format: winston.format.combine(
         winston.format.timestamp(),
@@ -12,13 +13,13 @@ const logger = winston.createLogger({
   ]
 });
 async function infolog(requestObject){
-    logger.info(`${requestObject.method}, headers: ${JSON.stringify(requestObject.headers)} body:${JSON.stringify(requestObject.body)}, access-url:${requestObject.originalUrl}, ip:${requestObject.ip}, ips:${requestObject.ips}`);
+    logger.info(`${requestObject.method}, headers: ${JSON.stringify(requestObject.headers)} body:${JSON.stringify(requestObject.body)}, access-url:${requestObject.originalUrl}, ip:${requestObject.ip}, ips:${requestObject.ips} \n`);
 }
 async function errorlog(requestObject){
-    logger.error(`${requestObject.method}, body:${JSON.stringify(requestObject.body)}, access-url:${requestObject.originalUrl}, ip:${requestObject.ip}, ips:${requestObject.ips}`);
+    logger.error(`${requestObject.method}, body:${JSON.stringify(requestObject.body)}, access-url:${requestObject.originalUrl}, ip:${requestObject.ip}, ips:${requestObject.ips} \n`);
 }
 async function warnlog(requestObject){
-    logger.warn(`${requestObject.method}, body:${JSON.stringify(requestObject.body)}, access-url:${requestObject.originalUrl}, ip:${requestObject.ip}, ips:${requestObject.ips}`);
+    logger.warn(`${requestObject.method}, body:${JSON.stringify(requestObject.body)}, access-url:${requestObject.originalUrl}, ip:${requestObject.ip}, ips:${requestObject.ips} \n`);
 }
 
 export default infolog;
