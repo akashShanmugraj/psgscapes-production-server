@@ -1,129 +1,125 @@
 # PSG Scapes
 
-A Full Stack Node.JS server that utilises Mongoose and Express.JS to communicate between Flutter, React and MongoDB for the backend and uses React for the online interface...
+PSG Scapes is a Full Stack Node.JS server that utilizes Mongoose and Express.JS to communicate between Flutter, React, and MongoDB for the backend. It also uses React for the online interface.
 
----
+## Routes
 
-# Routes
+1. **Faculty Information**
 
-Faculty Information
+    ```
+    /api/facultyInfo/:id
+    ```
 
-```
-/api/facultyInfo/:id
-```
+    Description: Retrieve faculty information by providing the ID number.
 
-```
-Student Infomation by giving ID number. Works for both students and faculty
+2. **Student Information by ID**
 
-```
+    ```
+    /api/userInfo/:id
+    ```
 
-/api/userInfo/:id
+    Description: Retrieve student information by providing the ID number. Works for both students and faculty.
 
-```
+3. **Student Information by Class**
 
-Student Infomation by giving ID number. Works for students of a specifc class
+    ```
+    /api/userInfo/studentsofclass/:classKey
+    ```
 
-```
+    Description: Retrieve student information by providing the class key. Works for students of a specific class.
 
-/api/userInfo/studentsofclass/:classKey
+4. **All Students Information**
 
-```
+    ```
+    /api/userInfo/students/all
+    ```
 
-Information of all the students in the data base
+    Description: Retrieve information of all the students in the database.
 
-```
+5. **Timetable for the Week with Room UUIDs**
 
-/api/userInfo/students/all
+    ```
+    /api/timetable/comparison/week/:id
+    ```
 
-```
+    Description: Retrieve the timetable for the week along with room UUIDs.
 
-Timetable for the week along with room UUIDs
+6. **Timetable for a Single Day with Room UUIDs**
 
-```
+    ```
+    /api/timetable/comparison/day/:id/:day
+    ```
 
-/api/timetable/comparison/week/:id
+    Description: Retrieve the timetable for a single day with room UUIDs.
 
-```
+7. **Timetable for the Week without Room UUIDs**
 
-Timetable for a single day with room UUIDs
+    ```
+    /api/timetable/schedule/week/:id
+    ```
 
-```
+    Description: Retrieve the timetable for the week without room UUIDs.
 
-/api/timetable/comparison/day/:id/:day
+8. **Timetable for a Single Day without Room UUIDs**
 
-```
+    ```
+    /api/timetable/schedule/day/:id/:day
+    ```
 
-Timetable for the week without room UUIDs
+    Description: Retrieve the timetable for a single day without room UUIDs.
 
-```
+9. **Attendance Information by Course ID**
 
-/api/timetable/schedule/week/:id
+    ```
+    /api/attendance/byClass/:id
+    ```
 
-```
+    Description: Retrieve attendance information according to the Course ID.
 
-Timetable for a single day without room UUIDs
+10. **Attendance Information by Student ID**
 
-```
+    ```
+    /api/attendance/student/:id
+    ```
 
-/api/timetable/schedule/day/:id/:day
+    Description: Retrieve attendance information according to the Student ID.
 
-```
+11. **Course Data by Course ID**
 
-Attendance information according to the Course ID
+    ```
+    /api/courseData/:id
+    ```
 
-```
+    Description: Retrieve course data according to the Course ID.
 
-/api/attendance/byClass/:id
+12. **Attendance Information for All Students**
 
-```
+    ```
+    /api/attendance/students
+    ```
 
-Attendance information according to the Student ID
+    Description: Retrieve attendance information for all students.
 
-```
+13. **Attendance Information for Specific Student in Specific Class**
 
-/api/attendance/student/:id
+    ```
+    /api/attendance/singleRecord/:id/:studentCode
+    ```
 
-```
+    Description: Retrieve attendance information for a specific student in a specific class.
 
-Course Data according to the Course ID
+14. **Attendance Verification**
 
-```
+    ```
+    /api/attendanceUpdate/presenceVerify
+    ```
 
-/api/courseData/:id
+    Description: Verify attendance information. The required data to be passed in `req.body` includes studentCode, datetime, courseCode, classKey, periodNumber, and os.
 
-```
+## Installation and Usage
 
-Attendance information for all students
+You can clone this server and then run "npm run server" in the terminal window in the folder to start the server
 
-```
+## Contributing
+Akash Shanmugaraj, Anandkumar NS
 
-/api/attendance/students
-
-```
-
-Attendance information for a specific student in a specific class
-
-```
-
-/api/attendance/singleRecord/:id/:studentCode
-
-```
-
----
-
-Attedance Verification
-
-```
-
-/api/attendanceUpdate/presenceVerify
-
-```
-
-The information that needs to be passed in req.body are: -
-studentCode
-datetime
-courseCode
-classKey
-periodNumber
-os
-```
